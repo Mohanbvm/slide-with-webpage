@@ -1,0 +1,51 @@
+
+<ion-view title="navTitle" hide-back-button="true" left-buttons="leftButtons" right-buttons="rightButtons"
+      hide-back-button="true">
+    <ion-slide-box >
+       <ion-slide>
+          <div has-header="true" padding="true" style="width: auto; height: 400px; background-color:lightblue" >
+            </br></br></br>
+            Slide 1 {{navTitle}}
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div has-header="true" padding="true" style="width: auto; height: 400px; background-color:lightgreen" >
+            </br></br></br>
+            Slide 2 {{navTitle}}
+            <!---
+            <object data=http://www.web-source.net width="600" height="400">
+                <embed src=http://www.web-source.net width="600" height="400">    
+                </embed>
+                Error: Embedded data could not be displayed.
+            </object>
+            -->
+            <!--- Why does Google.com below not work ? 
+            <object data=http://www.google.com width="600" height="400">
+                <embed src=http://www.google.com width="600" height="400">    
+                </embed>
+                Error: Embedded data could not be displayed.
+            </object>
+            -->
+            <!--- Why includung the web page this way work ? 
+            <div ng-bind-html-unsafe="http://www.google.com"></div>
+            -->
+            <!--- Why does including web page yhis way work ? 
+            <div ng-include="http://www.google.com"></div>
+            -->
+            <!--- Why does including web page this way work ? -->
+            <div style="width: auto; height: 400px; background-color:lightblue" >
+                <iframe src="http://www.w3schools.com"></iframe>
+                <!--- Why does including this web page inclusion does not work ? -->
+                <iframe src="http://www.google.com"></iframe>
+            </div>
+            
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div has-header="true" padding="true" style="width: auto; height: 400px; background-color:lightyellow" >
+            </br></br></br>
+            Slide 3 {{navTitle}}
+          </div>
+        </ion-slide>
+    </ion-slide-box>
+</ion-view>
